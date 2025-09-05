@@ -6,8 +6,23 @@ Write down the steps a program would need to make a cup of tea. Then implement a
 function make_tea() that prints each step.
 '''
 # enter your code here
+# 1. Fill Kettle with Water
+# 2. Boil Water
+# 3. Place Tea Bag in Mug
+# 4. Add Boiling Water
+# 5. Let Steep for 1-2 Minutes
+# 6. Enjoy
 
-
+def make_tea():
+    steps = [ "1. Fill Kettle with Water ", 
+              "2. Boil the Water ", 
+              "3. Place Tea Bag in Mug ",
+              "4. Add Boiling Water", 
+              "5. Let steep for 1-2 Minutes",
+              "6. Enjoy Tea!!"]
+    for step in steps:
+        print(step)
+make_tea()
 pause=input('pause')
 clear_screen()
 '''
@@ -18,6 +33,9 @@ Given a list [2, 4, 6, 8, 10], write a program that prints the next three number
 '''
 # enter your code here
 
+list1 = [2,4,6,8,10]
+for list1 in range(12,17,2):
+    print(list1)
 
 pause=input('pause')
 clear_screen()
@@ -28,6 +46,9 @@ Write a program that asks the user for their first and last name, then prints a 
 "Hello, <first name> <last name>!"
 '''
 # enter your code here
+first_name = input("Enter your first name: ")
+last_name = input("Enter your last name: ")
+print("Hello,", first_name, last_name)
 
 
 pause=input('pause')
@@ -49,9 +70,11 @@ Ask the user to input two numbers. Calculate and print their sum, difference, pr
 and division (both / and //).
 '''
 # enter your code here
-
-
-pause=input('pause')
+num_1 = input("Enter a #: ")
+num_2 = input('Enter another #: ')
+print(int(num_1 + num_2, num_1 - num_2, num_1 * num_2, num_1 / num_2, num_1 % num_2))
+      
+pauce=input('pause')
 clear_screen()
 '''
 #6
