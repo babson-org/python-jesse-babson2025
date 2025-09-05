@@ -1,13 +1,29 @@
 #%%
 # print 'hello' 5 times using an arithmetic operator
 
+print("Hello " *5 )
 
 #%%
 # print 'hello' 5 times using a loop
+for i in range(5):
+    print("Hello")
 
+    # comment: 
+  # end for
+
+
+
+
+
+
+
+
+    # comment: 
+  # end for
 #%%
 # print 'hello' 5 times on the same line using a loop
-
+for i in range(5):
+    print("Hello")
 #%%
 ''' using nested loops print the following:
 
@@ -16,15 +32,26 @@
 20 21 22
 
 '''
+for row in range(3):         
+    for col in range(3):    
+        print(str(row) + str(col), end=" ")
+    print()  
+
+
+           
 #%%
 # define txt and input some text from the keyboard into it
 
-
+txt = "Jesse"
+print(txt)
 #%%
 # print each letter in txt 
-
+txt = 'Jesse'
+for i in range(len(txt)): 
+  print(txt[i])
 #%%
 # assign the variable letter to the first letter in txt
+txt = 'Jesse'
 
 #%%
 # print out all the letters in txt that are equal to the first letter
@@ -51,6 +78,16 @@ result: tttt
                                3) shift inside the for loop
                                     4) print out the printed list outside the for loop
                                     '''
+
+
+names_list = ["Rocky", "Newell", "Burke" , "Jones" , "Rowley" ]
+Length = len(names_list)
+shifted_list = [] * 5
+
+for i, value in enumerate(names_list):
+    new_index = (i - 3) % Length
+    shifted_list = [new_index]
+print(new_index)
 
 
 
