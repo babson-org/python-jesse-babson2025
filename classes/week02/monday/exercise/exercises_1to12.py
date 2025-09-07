@@ -70,11 +70,24 @@ Ask the user to input two numbers. Calculate and print their sum, difference, pr
 and division (both / and //).
 '''
 # enter your code here
-num_1 = input("Enter a #: ")
-num_2 = input('Enter another #: ')
-print(int(num_1 + num_2, num_1 - num_2, num_1 * num_2, num_1 / num_2, num_1 % num_2))
+num_1 = int(input("Enter a #: "))
+num_2 = int(input("Enter another #: "))
+sum_result = num_1 + num_2
+difference = num_1 - num_2
+product = num_1 * num_2 
+if num_2 != 0:
+    division = num_1 / num_2 
+    floor_division = num_1 // num_2 
+else:
+    division = "Cannot divide by zero"
+    floor_division = "Cannot divide by zero"
+print("Sum:", sum_result)
+print("Difference:", difference)
+print("Product:", product)
+print("Division:", division)
+print("Floor Division:", floor_division)
       
-pauce=input('pause')
+pause=input('pause')
 clear_screen()
 '''
 #6
@@ -84,7 +97,10 @@ capitalized, and split it into words.
 '''
 
 # enter your code here
-
+sent1 = input("Please type a sentence: ")
+print(str.upper(sent1))
+print(str.lower(sent1))
+print(str.capitalize(sent1))
 
 pause=input('pause')
 clear_screen()
@@ -95,7 +111,10 @@ Calculate the result of the following without parentheses and then with parenthe
 10 + 2 * 5 / 2 - 3 ** 2
 '''
 # enter your code here
-
+calculation1 = 10 + 2 * 5 / 2 - 3 ** 2
+print(calculation1)
+calculation2 = (10 + 2) * (5 / 2) - (3 ** 2)
+print(calculation2)
 
 pause=input('pause')
 clear_screen()
@@ -106,7 +125,9 @@ Create a list of your three favorite foods. Replace the second item with a new o
 then print the list.
 '''
 # enter your code here
-
+food_list = ["Eggs ", " Bagels ", "Waffles "]
+food_list[1] = "Pizza"
+print(str(food_list))
 
 pause=input('pause')
 clear_screen()
@@ -117,8 +138,9 @@ Create a tuple with four numbers. Try to change the first number (observe the er
 and then print the tuple.
 '''
 # enter your code here
+tup1 = tuple("1", "2", "3", "4")
 
-
+print(tup1)
 pause=input('pause')
 clear_screen()
 '''
@@ -128,7 +150,12 @@ Create a dictionary representing a student (name, age). Update the age. Create a
 favorite numbers and add a new number.
 '''
 # enter your code here
-
+student1 = {"Jesse":21}
+student1["Jesse"] = 20
+print(student1)
+fav_nums = [24, 15, 8, 28, 15 ]
+fav_nums.append(9)
+print(fav_nums)
 
 pause=input('pause')
 clear_screen()
@@ -139,7 +166,12 @@ Ask the user to input their favorite quote. Save it to a file quotes.txt
 and read it back to print it.
 '''
 # enter your code here
-
+quote = input("Enter your favorite quote: ")
+with open("quotes.txt", "w") as file:
+    file.write(quote)
+with open("quotes.txt", "r") as file:
+    saved_quote = file.read()
+print("Your favorite quote: " saved_quote)
 
 pause=input('pause')
 clear_screen()
@@ -148,7 +180,16 @@ clear_screen()
 Ask the user to input 5 numbers (one at a time), store them in a list, and print the sum and average.
 '''
 # enter your code here
-
+num1 = int(input("Enter number 1: "))
+num2 = int(input("Enter number 2: "))
+num3 = int(input("Enter number 3: "))
+num4 = int(input("Enter number 4: "))
+num5 = int(input("Enter number 5: "))
+num_list = [num1, num2, num3, num4, num5]
+sum_numlist = sum(num_list)
+average = sum(num_list) / len(num_list)
+print("Sum ", sum_numlist)
+print("Average ", average)
 
 pause=input('pause')
 clear_screen()
