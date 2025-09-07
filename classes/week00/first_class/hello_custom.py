@@ -1,8 +1,8 @@
 # %%
 print('Hello, World!')
-print('Hello, World')
+
 # %%
-name = input('Jesse ')
+name = input('Please enter your name: ')
 print('Hello, ' + name + '!')
 
 #new comment
