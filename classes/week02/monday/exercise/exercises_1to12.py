@@ -49,7 +49,8 @@ Write a program that asks the user for their first and last name, then prints a 
 first_name = input("Enter your first name: ")
 last_name = input("Enter your last name: ")
 print("Hello,", first_name, last_name)
-
+first_name = first_name.capitalize()
+last_name = last_name.capitalize()
 
 pause=input('pause')
 clear_screen()
@@ -59,8 +60,13 @@ clear_screen()
 Write a program that prints your Python version and platform using the sys and platform modules.
 '''
 # enter your code here
+import sys
+import platform
+import pprint
 
-
+#pprint.pprint(dir(sys))
+print(type(sys.version))
+print(sys.version, sys.platform)
 pause=input('pause')
 clear_screen()
 '''
@@ -70,8 +76,21 @@ Ask the user to input two numbers. Calculate and print their sum, difference, pr
 and division (both / and //).
 '''
 # enter your code here
-num_1 = int(input("Enter a #: "))
-num_2 = int(input("Enter another #: "))
+txt = "Enter a #: "
+while True: 
+    try:
+        num_1 = int(input(txt))
+        break
+    except ValueError:
+        txt = "follow instructions"
+
+txt = "Enter another #: "
+while True: 
+    try:
+        num_2 = int(input(txt))
+        break 
+    except ValueError:
+        txt = "follow Instructions"        
 sum_result = num_1 + num_2
 difference = num_1 - num_2
 product = num_1 * num_2 
@@ -97,10 +116,11 @@ capitalized, and split it into words.
 '''
 
 # enter your code here
-sent1 = input("Please type a sentence: ")
-print(str.upper(sent1))
-print(str.lower(sent1))
-print(str.capitalize(sent1))
+txt = input("Please type a sentence: ")
+print(txt.upper())
+print(txt.lower())
+print(txt.capitalize())
+print(txt.split())
 
 pause=input('pause')
 clear_screen()
