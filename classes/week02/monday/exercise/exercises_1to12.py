@@ -171,7 +171,7 @@ with open("quotes.txt", "w") as file:
     file.write(quote)
 with open("quotes.txt", "r") as file:
     saved_quote = file.read()
-print("Your favorite quote: " saved_quote)
+
 
 pause=input('pause')
 clear_screen()
