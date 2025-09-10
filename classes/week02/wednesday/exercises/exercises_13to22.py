@@ -5,7 +5,13 @@ from classes.week00.second_class.utils import clear_screen
 Ask the user for a number and print whether it is positive, negative, or zero.
 '''
 # enter code here
-num = int(input("please enter a number: "))
+txt = "Please enter a number: "
+while True:
+    try:
+        num = int(input(txt))
+        break
+    except: ValueError
+    txtm = "a number please"
 if num == 0: 
     print('zero')
 elif num > 0:
@@ -13,6 +19,7 @@ elif num > 0:
 else:
     print('negative')
 
+# In class
 
 pause=input('pause')
 clear_screen()
@@ -22,7 +29,13 @@ clear_screen()
 Ask the user for a number and print if it is even or odd.
 '''
 # enter code here
-num = int(input("please enter a number: "))
+txt = "Please enter a number: "
+while True:
+    try:
+        num = int(input(txt))
+        break
+    except: ValueError
+    txtm = "a number please"
 if num % 2 == 0 :
     print("Even")
 elif num == 0:
@@ -39,16 +52,28 @@ clear_screen()
 Ask the user for two numbers and check if both are positive, either is positive, or none is positive.
 '''
 # enter code here
-num1 = int(input("please enter a number: "))
-num2 = int(input("please enter another number: "))
+txt = "Please enter a number: "
+while True:
+    try:
+        num1 = int(input(txt))
+        break
+    except: ValueError
+    txtm = "a number please"
+txt = "Please enter a number: "
+while True:
+    try:
+        num2 = int(input(txt))
+        break
+    except: ValueError
+    txtm = "a number please"
 if num1 > 0 and num2 > 0: 
     print("both positive")
 elif num1 < 0 and num2 > 0:
     print("second number positive")
 elif num1 > 0 and num2 < 0:
     print("First number positive")
-elif num1 == 0 or num2 == 0:
-    print("Neutral")
+else num1 < 0 or num2 < 0:
+    print("None Positive")
 
 
 
@@ -60,8 +85,8 @@ clear_screen()
 Print all numbers from 1 to 20, skipping multiples of 3.
 '''
 # enter code here
-for i in range(1,20):
-    if i % 3 == 0:
+for i in range(1,21):
+    if i % 3 != 0:
         print(i)
 
 
@@ -73,6 +98,19 @@ clear_screen()
 Ask the user to guess a secret number (hardcoded) until they get it right.
 '''
 # enter code here
+secret = 3
+
+while secret != num:
+txt = 'please enter a number (1-10): '
+while True:
+    try:
+        num = int(input(txt))
+        if num < 1 or num > 10: raise Exception
+        break
+    except ValueError: 
+        txt = 'A number'
+    except Exception:
+        txt = 'between 1 and 10'
 
 
 

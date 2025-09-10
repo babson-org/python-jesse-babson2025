@@ -211,5 +211,6 @@ average = sum(num_list) / len(num_list)
 print("Sum ", sum_numlist)
 print("Average ", average)
 
+
 pause=input('pause')
 clear_screen()

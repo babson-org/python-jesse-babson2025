@@ -1,4 +1,3 @@
-def square():
-    print(int(x^2))
-x = int(input("Please enter a number: "))    
-square(x)
+for i in range(1,21):
+    if i % 3 != 0:
+        print(i)

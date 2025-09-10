@@ -1,5 +1,6 @@
-txt = input("Please type a sentence: ")
-print(txt.upper())
-print(txt.lower())
-print(txt.capitalize())
-print(txt.split())
+quote = input("Enter your favorite quote: ")
+with open("quotes.txt", "w") as file:
+    file.write(quote)
+with open("quotes.txt", "r") as file:
+    saved_quote = file.read()
+
