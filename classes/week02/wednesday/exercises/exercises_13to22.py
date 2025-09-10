@@ -119,8 +119,6 @@ Write a function add_item(lst, item) that appends item to lst and observe the ef
 def add_item(lst,item):
     lst.append(item)
     print(list)
-add_item(lst, "Hello")
-add_item(lst, "Jesse")
 
 
     
@@ -159,7 +157,7 @@ name3 = str(input("please enter another name: "))
 name4 = str(input("please enter another name: "))
 name5 = str(input("please enter another name: "))
 names = [name1, name2, name3, name4, name5]
-names = [(name.title()), for name in names]
+
 names = sorted(names)
 print(names)
 
