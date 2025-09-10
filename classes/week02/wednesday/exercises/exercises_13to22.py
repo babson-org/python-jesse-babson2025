@@ -116,7 +116,13 @@ clear_screen()
 Write a function add_item(lst, item) that appends item to lst and observe the effect on the original list.
 '''
 # enter code here
-def add_item(1st,item):
+def add_item(lst,item):
+    lst.append(item)
+    print(list)
+add_item(lst, "Hello")
+add_item(lst, "Jesse")
+
+
     
 
     
@@ -130,7 +136,13 @@ clear_screen()
 Write a function greet(name) with single-line and multi-line comments explaining each step.
 '''
 # enter code here
+# define the function
 
+def greet(name):
+    print("Hello, " + name + " how are you!")
+greet('Jesse')
+    
+# print function in variable 
 
 
 pause=input('pause')
