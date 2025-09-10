@@ -116,7 +116,10 @@ clear_screen()
 Write a function add_item(lst, item) that appends item to lst and observe the effect on the original list.
 '''
 # enter code here
+def add_item(1st,item):
+    
 
+    
 
 
 pause=input('pause')
@@ -138,6 +141,31 @@ clear_screen()
 Ask the user to enter 5 names. Store them in a list, capitalize each name, sort the list, and print it.
 '''
 # enter code here
+name1 = str(input("please enter a name: "))
+name2 = str(input("please enter another name: "))
+name3 = str(input("please enter another name: "))
+name4 = str(input("please enter another name: "))
+name5 = str(input("please enter another name: "))
+names = [name1, name2, name3, name4, name5]
+names = [(name.title()), for name in names]
+names = sorted(names)
+print(names)
+
+##Chatgpt ansmwer
+# Ask the user to enter 5 names and store them in a list
+names = []
+for i in range(5):
+    name = input(f"Enter name {i+1}: ")
+    names.append(name)
+
+# Capitalize each name
+names = [name.title() for name in names]
+
+# Sort the list alphabetically
+names.sort()
+
+# Print the sorted, capitalized list
+print("Sorted names:", names)
 
 
 
