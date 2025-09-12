@@ -1,6 +1,6 @@
 """
 Lab 1 – Python Basics
-Author: <Your Name>
+Author: Jesse Buchanan
 Instructions: Complete each part below. Save your work and commit + sync in Codespaces.
 """
 
@@ -13,14 +13,29 @@ def draw_diamond():
     and print a symmetric diamond of that height.
     """
     # TODO: Prompt user for an odd number
-    height = int(input("Enter an odd number for the diamond height: "))
 
     # TODO: Draw the top half of the diamond
-
-    # TODO: Draw the bottom half of the diamond
-
+height = int(input("Enter an odd number for the height: "))
+middle = height//2
+for i in range(middle, -1, -1):
+    before = " " * i
+    between_num = ((middle - i)) * 2-1
+    between = " " * between_num
+    if between_num == -1:
+         print(before + "*")
+    else:
+        print(before + "*" + between + "*")
+# TODO: Draw the bottom half of the diamond
+for i in range(1, middle +1):
+    before = " " * i
+    between_num = ((middle - i)) * 2-1
+    between = " " * between_num
+    if between_num == -1:
+         print(before + "*")
+    else:
+        print(before + "*" + between + "*")
 # Uncomment to test Part 1
-# draw_diamond()
+#draw_diamond()
 
 
 # ==============================
@@ -35,19 +50,32 @@ def text_analysis():
         - Number of sentences (., ?, !) 
     """
     # TODO: Get user input
-    text = input("Enter some text: ")
+text = input("Enter some text: ")
 
     # TODO: Count letters
-    letters = 0
+letters = 0
+for char in text:
+    if char.isalpha():
+        letters += 1
+#print(f"Letters: {letters}") check
 
     # TODO: Count words
-
+words = 1
+for space in text:
+    if space == " ":
+        words += 1
+    else:
+        pass
+print(words)
     # TODO: Count sentences
-
+sentences = 1
+for sent in text:
+        if char in ".?!":
+            sentences += 1
     # TODO: Print the results
-    print(f"Letters: {letters}")
-    print(f"Words: {0}")        # replace 0
-    print(f"Sentences: {0}")    # replace 0
+print(f"Letters: {letters}")
+print(f"Words: {words}")        # replace 0
+print(f"Sentences: {sentences}")    # replace 0
 
 # Uncomment to test Part 2
 # text_analysis()
@@ -71,6 +99,9 @@ def caesar_cipher():
     choice = input("Type 'e' to encrypt or 'd' to decrypt: ").lower()
 
     # TODO: Implement encryption and decryption logic
+    if choice == 'd':
+        shift = -shift
+
     result = ""
 
     # TODO: Print the final result
