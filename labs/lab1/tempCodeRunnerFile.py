@@ -1,26 +1,28 @@
-text = input("Enter some text: ")
+text = input("Enter text: ")
 
-    # TODO: Count letters
-letters = 0
+    # TODO: Get shift value
+shift = int(input("Enter shift value (integer): "))
+
+    # TODO: Ask user whether to encrypt or decrypt
+choice = input("Type 'e' to encrypt or 'd' to decrypt: ").lower()
+
+    # TODO: Implement encryption and decryption logic
+if choice == 'd':
+        shift = -shift
+
+result = ""
+
 for char in text:
     if char.isalpha():
-        letters += 1
-#print(f"Letters: {letters}") check
-
-    # TODO: Count words
-words = 1
-for space in text:
-    if space == " ":
-        words += 1
+        
+        if char.isupper():
+                result += chr((ord(char) - 65 + shift) % 26 + 65)
+        
+        else:
+                result += chr((ord(char) - 97 + shift) % 26 + 97)
+    
     else:
-        pass
-print(words)
-    # TODO: Count sentences
-sentences = 1
-for sent in text:
-        if char in ".?!":
-            sentences += 1
-    # TODO: Print the results
-print(f"Letters: {letters}")
-print(f"Words: {words}")        # replace 0
-print(f"Sentences: {sentences}")    # replace 0
+            result += char
+
+    # TODO: Print the final result
+print("Result:", result)
