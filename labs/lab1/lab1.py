@@ -13,32 +13,40 @@ def draw_diamond():
     and print a symmetric diamond of that height.
     """
     # TODO: Prompt user for an odd number
-height = int(input("Enter an odd number for the height: "))
-    # TODO: Draw the top half of the diamond
+    try:
+        height = int(input("Enter an odd number for the height: "))
 
-# USING FLOOR DIVISION OF ODD NUMBER TO GET ODD # OF SPACES
-middle = height//2
-
-# FOR LOOP TO DETERMINE NUMBER OF SPACES AND IF THERE IS NO SPACE TO PUT A *
-for i in range(middle, -1, -1):
-    before = " " * i
-    between_num = ((middle - i)) * 2-1
-    between = " " * between_num
+        # I ADDED PROTECTION TO NOT BREAK INPUT (WE ONLY WANT + ODD #)
+    except ValueError:
+        print("Please enter an odd number")
+        return
+    if height <= 0 or height % 2 == 0:
+        print("Error: Please enter a positive odd number.")
+        return
     
-    if between_num == -1:
+    middle = height // 2 
+
+# TODO: Draw the top half of the diamond
+
+    for i in range(middle, -1, -1):          # USED A FOR LOOP TO DETERMINE NUMBER OF SPACES AND IF THERE IS NO SPACE TO PUT A *
+        before = " " * i                     # ADDS SPACE BEFORE THE STAR
+        between_num = ((middle - i)) * 2-1   # MIDDLE - i GROWS AS >i, THEN 2 - 1 GIVES UP CORRECT PATTERN
+        between = " " * between_num          # (ACTUAL SPACES)
+    
+    if between_num == -1:                    # SAME LOGIC TRICK AS LINE 3
          print(before + "*")
     
     else:
         print(before + "*" + between + "*")
 
 # TODO: Draw the bottom half of the diamond
-for i in range(1, middle +1):
-    before = " " * i
-    between_num = ((middle - i)) * 2-1
-    between = " " * between_num
+    for i in range(1, middle +1):                   # SAME LOGIC AS ABOVE (DIFFERENT RANGE FOR BOTTOM)
+        before = " " * i
+        between_num = ((middle - i)) * 2-1
+        between = " " * between_num
     
     if between_num == -1:
-         print(before + "*")
+        print(before + "*")
     
     else:
         print(before + "*" + between + "*")
@@ -63,32 +71,33 @@ text = input("Enter some text: ")
     # TODO: Count letters
 letters = 0
 
-for char in text:
-    if char.isalpha():
+for char in text:               # USE CHAR TO GO THROUGH INPUT 1 LETTER AT A TIME
+    if char.isalpha():          # .isalpha() TO DETERMINE IF THE CHARACTER IS A LETTER
         letters += 1
 
     # TODO: Count words
-words = 1
+words = 1                       # COUNTS WORDS BY ADDING SPACES, STARTS AT SPACE "1"
 
 for space in text:
     
     if space == " ":
-        words += 1
+        words += 1              # ADDs A SPACE TO ACCOUNT FOR LAST WORD OF SENTENCE
     
     else:
         pass
 
     # TODO: Count sentences
-sentences = 1
 
-for sent in text:
-        
-        if char in ".?!":
-            sentences += 1
+sentences = 0                  # Set sentences to count (start at zero)
+
+for char in text:              # Counts sentences by looking for the characters ". ? !"
+    if char in ".?!":
+        sentences += 1
     # TODO: Print the results
+
 print(f"Letters: {letters}")
-print(f"Words: {words}")        # replace 0
-print(f"Sentences: {sentences}")    # replace 0
+print(f"Words: {words}")        
+print(f"Sentences: {sentences}")    
 
 # Uncomment to test Part 2
 # text_analysis()
@@ -106,22 +115,22 @@ def caesar_cipher():
 text = input("Enter text: ")
 
     # TODO: Get shift value
-shift = int(input("Enter shift value (integer): ")) % 26
+shift = int(input("Enter shift value (integer): ")) % 26          # MODULUS THE # OF LETTERS IN ALPHABET
 
     # TODO: Ask user whether to encrypt or decrypt
 choice = input("Type 'e' to encrypt or 'd' to decrypt: ").lower()
 
     # TODO: Implement encryption and decryption logic
-if choice == 'd':
+if choice == 'd':                                               # DETERMINES FORWARD OR REVERSE SHIFT
         shift = -shift
 
-result = ""
+result = ""                 # I KNOW THERE HAS TO BE A MORE EFFICIENT WAY
 alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
 for char in text:
     if char.islower():
-        result += alphabet[(alphabet.index(char) + shift) % 26]
-    elif char.isupper():
+        result += alphabet[(alphabet.index(char) + shift) % 26]           # USE MODULUS 26 FOR THE NUMBER OF LETTERS IN ALPHABET
+    elif char.isupper():                                                   # USING .upper and .lower TO ACCOUNT CAPITALIZATION
         result += alphabet[(alphabet.index(char.lower()) + shift) % 26].upper()
     else:
         result += char 

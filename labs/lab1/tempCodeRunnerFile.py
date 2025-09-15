@@ -1,30 +1,32 @@
-def caesar_cipher():
-    """
-    Ask the user for text and a shift value.
-    Provide options to encrypt or decrypt the text using a Caesar cipher.
-    """
-    # TODO: Get user input text
-text = input("Enter text: ")
+text = input("Enter some text: ")
 
-    # TODO: Get shift value
-shift = int(input("Enter shift value (integer): ")) % 26
+    # TODO: Count letters
+letters = 0
 
-    # TODO: Ask user whether to encrypt or decrypt
-choice = input("Type 'e' to encrypt or 'd' to decrypt: ").lower()
+for char in text:               # USE CHAR TO GO THROUGH INPUT 1 LETTER AT A TIME
+    if char.isalpha():          # .isalpha() TO DETERMINE IF THE CHARACTER IS A LETTER
+        letters += 1
 
-    # TODO: Implement encryption and decryption logic
-if choice == 'd':
-        shift = -shift
+    # TODO: Count words
+words = 1                       # COUNTS WORDS BY ADDING SPACES, STARTS AT SPACE "1"
 
-result = ""
-alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-
-for char in text:
-    if char.islower():
-        result += alphabet[(alphabet.index(char) + shift) % 26]
-    elif char.isupper():
-        result += alphabet[(alphabet.index(char.lower()) + shift) % 26].upper()
+for space in text:
+    
+    if space == " ":
+        words += 1              # ADD A SPACE TO ACCOUNT FOR LAST WORD OF SENTENCE
+    
     else:
-        result += char 
-    # TODO: Print the final result
-print("Result:", result)
+        pass
+
+    # TODO: Count sentences
+
+sentences = 0                  # Set sentences to count first 
+
+for char in text:                   
+    if char in ".?!":
+        sentences += 1
+    # TODO: Print the results
+
+print(f"Letters: {letters}")
+print(f"Words: {words}")        
+print(f"Sentences: {sentences}")    
