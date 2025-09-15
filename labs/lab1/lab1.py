@@ -73,7 +73,7 @@ def text_analysis():
 
     for char in text:               # USE CHAR TO GO THROUGH INPUT 1 LETTER AT A TIME
         if char.isalpha():          # .isalpha() TO DETERMINE IF THE CHARACTER IS A LETTER
-            letters += 1
+            letters += 1            
 
     # TODO: Count words
     words = 1                       # COUNTS WORDS BY ADDING SPACES, STARTS AT SPACE "1"
@@ -115,7 +115,7 @@ def caesar_cipher():
 text = input("Enter text: ")
 
     # TODO: Get shift value
-shift = int(input("Enter shift value (integer): ")) % 26          # MODULUS THE # OF LETTERS IN ALPHABET
+shift = int(input("Enter shift value (integer between (1-25)): ")) % 26          # MODULUS THE # OF LETTERS IN ALPHABET
 
     # TODO: Ask user whether to encrypt or decrypt
 choice = input("Type 'e' to encrypt or 'd' to decrypt: ").lower()
@@ -124,7 +124,7 @@ choice = input("Type 'e' to encrypt or 'd' to decrypt: ").lower()
 if choice == 'd':                                               # DETERMINES FORWARD OR REVERSE SHIFT
         shift = -shift
 
-result = ""                 # I KNOW THERE HAS TO BE A MORE EFFICIENT WAY
+result = ""                 
 alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
 for char in text:
@@ -138,7 +138,7 @@ for char in text:
 print("Result:", result)
 
 # Uncomment to test Part 3
-# caesar_cipher()
+#caesar_cipher()
 
 
 # ==============================
