@@ -112,9 +112,13 @@ def caesar_cipher():
     Provide options to encrypt or decrypt the text using a Caesar cipher.
     """
     # TODO: Get user input text
-text = input("Enter text: ")
+    text = input("Enter text: ")
 
     # TODO: Get shift value
+#
+'''
+
+'''    
 shift = int(input("Enter shift value (integer between (1-25)): ")) % 26          # MODULUS THE # OF LETTERS IN ALPHABET
 
     # TODO: Ask user whether to encrypt or decrypt
