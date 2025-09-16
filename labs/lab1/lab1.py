@@ -33,11 +33,11 @@ def draw_diamond():
         between_num = ((middle - i)) * 2-1   # MIDDLE - i GROWS AS >i, THEN 2 - 1 GIVES UP CORRECT PATTERN
         between = " " * between_num          # (ACTUAL SPACES)
     
-    if between_num == -1:                    # SAME LOGIC TRICK AS LINE 3
-         print(before + "*")
+        if between_num == -1:                    # SAME LOGIC TRICK AS LINE 3
+            print(before + "*")
     
-    else:
-        print(before + "*" + between + "*")
+        else:
+            print(before + "*" + between + "*")
 
 # TODO: Draw the bottom half of the diamond
     for i in range(1, middle +1):                   # SAME LOGIC AS ABOVE (DIFFERENT RANGE FOR BOTTOM)
@@ -45,11 +45,11 @@ def draw_diamond():
         between_num = ((middle - i)) * 2-1
         between = " " * between_num
     
-    if between_num == -1:
-        print(before + "*")
+        if between_num == -1:
+            print(before + "*")
     
-    else:
-        print(before + "*" + between + "*")
+        else:
+            print(before + "*" + between + "*")
 # Uncomment to test Part 1
 #draw_diamond()
 
@@ -106,40 +106,45 @@ def text_analysis():
 # ==============================
 # Part 3: Caesar Cipher – Encrypt and Decrypt
 # ==============================
-def caesar_cipher():
+#def caesar_cipher(): 
     """
     Ask the user for text and a shift value.
     Provide options to encrypt or decrypt the text using a Caesar cipher.
     """
     # TODO: Get user input text
-    text = input("Enter text: ")
-
+    # ***Below
+    # text = input("Enter text: ")
     # TODO: Get shift value
-#
+    # shift = int(input("Enter shift value (integer between (1-25)): ")) % 26
 '''
 
-'''    
-shift = int(input("Enter shift value (integer between (1-25)): ")) % 26          # MODULUS THE # OF LETTERS IN ALPHABET
+
+'''
+#I had to add caesar_cipher() and text in order to not get "indent error"
+def caesar_cipher(): 
+    text = input("Enter text: ")
+    shift = int(input("Enter shift value (integer between (1-25)): ")) % 26
+              # MODULUS THE # OF LETTERS IN ALPHABET
 
     # TODO: Ask user whether to encrypt or decrypt
-choice = input("Type 'e' to encrypt or 'd' to decrypt: ").lower()
+    choice = input("Type 'e' to encrypt or 'd' to decrypt: ").lower()
 
     # TODO: Implement encryption and decryption logic
-if choice == 'd':                                               # DETERMINES FORWARD OR REVERSE SHIFT
+    if choice == 'd':                                               # DETERMINES FORWARD OR REVERSE SHIFT
         shift = -shift
 
-result = ""                 
-alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    result = ""                 
+    alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
-for char in text:
-    if char.islower():
-        result += alphabet[(alphabet.index(char) + shift) % 26]           # USE MODULUS 26 FOR THE NUMBER OF LETTERS IN ALPHABET
-    elif char.isupper():                                                   # USING .upper and .lower TO ACCOUNT CAPITALIZATION
-        result += alphabet[(alphabet.index(char.lower()) + shift) % 26].upper()
-    else:
-        result += char 
+    for char in text:
+        if char.islower():
+                result += alphabet[(alphabet.index(char) + shift) % 26]           # USE MODULUS 26 FOR THE NUMBER OF LETTERS IN ALPHABET
+        elif char.isupper():                                                   # USING .upper and .lower TO ACCOUNT CAPITALIZATION
+                result += alphabet[(alphabet.index(char.lower()) + shift) % 26].upper()
+        else:
+                result += char 
     # TODO: Print the final result
-print("Result:", result)
+    print("Result:", result)
 
 # Uncomment to test Part 3
 #caesar_cipher()
