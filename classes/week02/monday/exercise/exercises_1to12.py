@@ -5,6 +5,16 @@ from classes.week00.second_class.utils import clear_screen
 Write down the steps a program would need to make a cup of tea. Then implement a Python 
 function make_tea() that prints each step.
 '''
+steps=['step1','step2','step3']
+def make_tea(myList):
+    myList[2] = "step5"
+    for item in myList:
+        print(item)
+    
+
+make_tea(steps)
+print(steps)
+
 # enter your code here
 # 1. Fill Kettle with Water
 # 2. Boil Water
@@ -32,6 +42,10 @@ Given a list [2, 4, 6, 8, 10], write a program that prints the next three number
 (the ones after 10)
 '''
 # enter your code here
+nums = [2, 4, 6, 8, 10]
+for i in range(3):
+    next = nums[-1] + 2 + i * 2
+    print(next)
 
 list1 = [2,4,6,8,10]
 for list1 in range(12,17,2):
@@ -60,6 +74,9 @@ clear_screen()
 Write a program that prints your Python version and platform using the sys and platform modules.
 '''
 # enter your code here
+import sys
+import platform
+import pprint
 import sys
 import platform
 import pprint
@@ -114,6 +131,11 @@ clear_screen()
 Ask the user to input a sentence. Print it in uppercase, lowercase, with the first letter 
 capitalized, and split it into words.
 '''
+txt = input('please entr some text:')
+print(txt.upper())
+print(txt.lower())
+print(txt.capitalize())
+print(txt.split())
 
 # enter your code here
 txt = input("Please type a sentence: ")
@@ -136,6 +158,8 @@ print(calculation1)
 calculation2 = (10 + 2) * (5 / 2) - (3 ** 2)
 print(calculation2)
 
+x = 2**3**2
+print(x)
 pause=input('pause')
 clear_screen()
 '''
