@@ -61,11 +61,15 @@ Write a program that asks the user for their first and last name, then prints a 
 '''
 # enter your code here
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4c919093ed6a54f625d28f1658d2c0a2c09ac34
 first_name = input("Enter your first name: ")
 last_name = input("Enter your last name: ")
 print("Hello,", first_name, last_name)
 first_name = first_name.capitalize()
 last_name = last_name.capitalize()
+<<<<<<< HEAD
 =======
 fname = input('please enter yur first name: ')
 lname = input('please enter your last name: ')
@@ -74,6 +78,8 @@ lname = lname.capitalize()
 print(f'Hello, {fname} {lname}')
 
 >>>>>>> 779d4cea6716a08a7b94a798755b96eee5b9ceb1
+=======
+>>>>>>> e4c919093ed6a54f625d28f1658d2c0a2c09ac34
 
 pause=input('pause')
 clear_screen()
@@ -86,14 +92,20 @@ Write a program that prints your Python version and platform using the sys and p
 import sys
 import platform
 import pprint
+import sys
+import platform
+import pprint
 
 #pprint.pprint(dir(sys))
 print(type(sys.version))
 print(sys.version, sys.platform)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 779d4cea6716a08a7b94a798755b96eee5b9ceb1
+=======
+>>>>>>> e4c919093ed6a54f625d28f1658d2c0a2c09ac34
 pause=input('pause')
 clear_screen()
 '''
@@ -104,6 +116,9 @@ and division (both / and //).
 '''
 # enter your code here
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4c919093ed6a54f625d28f1658d2c0a2c09ac34
 txt = "Enter a #: "
 while True: 
     try:
@@ -134,6 +149,7 @@ print("Product:", product)
 print("Division:", division)
 print("Floor Division:", floor_division)
       
+<<<<<<< HEAD
 =======
 txt = 'please enter an integer: '
 while True:
@@ -159,6 +175,8 @@ flr = x // y
 
 print(total, prod, diff, div, flr)
 >>>>>>> 779d4cea6716a08a7b94a798755b96eee5b9ceb1
+=======
+>>>>>>> e4c919093ed6a54f625d28f1658d2c0a2c09ac34
 pause=input('pause')
 clear_screen()
 '''
@@ -190,10 +208,14 @@ Calculate the result of the following without parentheses and then with parenthe
 '''
 # enter your code here
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4c919093ed6a54f625d28f1658d2c0a2c09ac34
 calculation1 = 10 + 2 * 5 / 2 - 3 ** 2
 print(calculation1)
 calculation2 = (10 + 2) * (5 / 2) - (3 ** 2)
 print(calculation2)
+<<<<<<< HEAD
 =======
 print(10 + 2 * 5 / 2 - 3 ** 2)
 
@@ -201,6 +223,8 @@ x = (10 + (2 * (5 / 2)) - (3 ** 2))
 >>>>>>> 779d4cea6716a08a7b94a798755b96eee5b9ceb1
 
 print(x)
+=======
+>>>>>>> e4c919093ed6a54f625d28f1658d2c0a2c09ac34
 
 x = 2**3**2
 print(x)
@@ -214,15 +238,21 @@ then print the list.
 '''
 # enter your code here
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e4c919093ed6a54f625d28f1658d2c0a2c09ac34
 food_list = ["Eggs ", " Bagels ", "Waffles "]
 food_list[1] = "Pizza"
 print(str(food_list))
 
+<<<<<<< HEAD
 =======
 myList =['ice cream', 'blueberries', 'cake']
 myList[1] = 'candy'
 print(myList)
 >>>>>>> 779d4cea6716a08a7b94a798755b96eee5b9ceb1
+=======
+>>>>>>> e4c919093ed6a54f625d28f1658d2c0a2c09ac34
 pause=input('pause')
 clear_screen()
 '''
