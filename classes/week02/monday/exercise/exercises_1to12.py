@@ -5,6 +5,16 @@ from classes.week00.second_class.utils import clear_screen
 Write down the steps a program would need to make a cup of tea. Then implement a Python 
 function make_tea() that prints each step.
 '''
+steps=['step1','step2','step3']
+def make_tea(myList):
+    myList[2] = "step5"
+    for item in myList:
+        print(item)
+    
+
+make_tea(steps)
+print(steps)
+
 # enter your code here
 # 1. Fill Kettle with Water
 # 2. Boil Water
@@ -32,6 +42,10 @@ Given a list [2, 4, 6, 8, 10], write a program that prints the next three number
 (the ones after 10)
 '''
 # enter your code here
+nums = [2, 4, 6, 8, 10]
+for i in range(3):
+    next = nums[-1] + 2 + i * 2
+    print(next)
 
 list1 = [2,4,6,8,10]
 for list1 in range(12,17,2):
@@ -46,11 +60,20 @@ Write a program that asks the user for their first and last name, then prints a 
 "Hello, <first name> <last name>!"
 '''
 # enter your code here
+<<<<<<< HEAD
 first_name = input("Enter your first name: ")
 last_name = input("Enter your last name: ")
 print("Hello,", first_name, last_name)
 first_name = first_name.capitalize()
 last_name = last_name.capitalize()
+=======
+fname = input('please enter yur first name: ')
+lname = input('please enter your last name: ')
+fname = fname.capitalize()
+lname = lname.capitalize()
+print(f'Hello, {fname} {lname}')
+
+>>>>>>> 779d4cea6716a08a7b94a798755b96eee5b9ceb1
 
 pause=input('pause')
 clear_screen()
@@ -67,6 +90,10 @@ import pprint
 #pprint.pprint(dir(sys))
 print(type(sys.version))
 print(sys.version, sys.platform)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 779d4cea6716a08a7b94a798755b96eee5b9ceb1
 pause=input('pause')
 clear_screen()
 '''
@@ -76,6 +103,7 @@ Ask the user to input two numbers. Calculate and print their sum, difference, pr
 and division (both / and //).
 '''
 # enter your code here
+<<<<<<< HEAD
 txt = "Enter a #: "
 while True: 
     try:
@@ -106,6 +134,31 @@ print("Product:", product)
 print("Division:", division)
 print("Floor Division:", floor_division)
       
+=======
+txt = 'please enter an integer: '
+while True:
+    try:
+        x = int(input(txt))
+        break
+    except ValueError:
+        txt = 'follow directions, enter a number: '
+
+txt = 'please enter an integer: '
+while True:
+    try:
+        y = int(input(txt))
+        break
+    except ValueError:
+        txt = 'follow directions, enter a number: '
+
+total = x + y
+diff = x - y
+prod = x * y
+div = x / y
+flr = x // y
+
+print(total, prod, diff, div, flr)
+>>>>>>> 779d4cea6716a08a7b94a798755b96eee5b9ceb1
 pause=input('pause')
 clear_screen()
 '''
@@ -114,6 +167,11 @@ clear_screen()
 Ask the user to input a sentence. Print it in uppercase, lowercase, with the first letter 
 capitalized, and split it into words.
 '''
+txt = input('please entr some text:')
+print(txt.upper())
+print(txt.lower())
+print(txt.capitalize())
+print(txt.split())
 
 # enter your code here
 txt = input("Please type a sentence: ")
@@ -131,11 +189,21 @@ Calculate the result of the following without parentheses and then with parenthe
 10 + 2 * 5 / 2 - 3 ** 2
 '''
 # enter your code here
+<<<<<<< HEAD
 calculation1 = 10 + 2 * 5 / 2 - 3 ** 2
 print(calculation1)
 calculation2 = (10 + 2) * (5 / 2) - (3 ** 2)
 print(calculation2)
+=======
+print(10 + 2 * 5 / 2 - 3 ** 2)
 
+x = (10 + (2 * (5 / 2)) - (3 ** 2))
+>>>>>>> 779d4cea6716a08a7b94a798755b96eee5b9ceb1
+
+print(x)
+
+x = 2**3**2
+print(x)
 pause=input('pause')
 clear_screen()
 '''
@@ -145,10 +213,16 @@ Create a list of your three favorite foods. Replace the second item with a new o
 then print the list.
 '''
 # enter your code here
+<<<<<<< HEAD
 food_list = ["Eggs ", " Bagels ", "Waffles "]
 food_list[1] = "Pizza"
 print(str(food_list))
 
+=======
+myList =['ice cream', 'blueberries', 'cake']
+myList[1] = 'candy'
+print(myList)
+>>>>>>> 779d4cea6716a08a7b94a798755b96eee5b9ceb1
 pause=input('pause')
 clear_screen()
 '''
