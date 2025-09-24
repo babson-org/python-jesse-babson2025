@@ -1,3 +1,22 @@
+import ticker.data
+
 def buy_input(active_client, clients):
-    print('get some input from user')
-    print('if user finishes or enters "" return')
+
+# Learned I need to import tickr.data in order to call from it
+
+# Ask for what stock they want to buy
+    while True:
+        Company_Stock = input("Which company would you like to invest in: ").strip()
+
+# Validating with the companies in tickr.data
+        if Company_Stock in 
+
+
+    
+    
+    
+    
+    
+    
+        print('get some input from user')
+        print('if user finishes or enters "" return')
