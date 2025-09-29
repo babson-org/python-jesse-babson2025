@@ -13,6 +13,12 @@ def calc_score(board: list[int]):
         '''
             line_sum takes 3 numbers and if the sum is either 30
             or -30 returns that sum otherwise do not return
+        
+        0 1 2
+        3 4 5
+        6 7 8
+        
+        
         '''         
          
         # TODO: Sum the values at board[a], board[b], board[c] 
