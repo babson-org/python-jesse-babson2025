@@ -11,4 +11,3 @@ def ai_move(board: list[int]):
     """
     for idx in range(9):
         if abs(board(idx)) : return idx 
-   
