@@ -41,11 +41,24 @@ def print_board(board: list[int]):
         # TODO: Return 'X' if value == 10
         # TODO: Return 'O' if value == -10
         # TODO: Otherwise, return str(value)  -> if not 10 or -10 return idx 1-9 as a string
-        pass
+        if value == 10 : 
+            return 'X'
+        elif value == -10:
+            return 'O'
+        else: return str(value)
         
     clear_screen()
     # TODO: Loop through rows
+    for row in range(3):
+    
     # TODO: For each row, print formatted board row using cell()
+        row_values = [cell(board[row * 3 + col]) for col in range(3)]
+        print('   |   |   ')
+        print(f' {row_values[0]} | {row_values[1]} | {row_values[2]} ')
+        print('   |   |   ')
+        if row < 2:
+            print('-----------')
+    print()
     # HINT: For each row create a list of what should be printed
     #       row_values = [ 'X', '2', '3' ] call cell() each time to get each value
     #       add the board layout:
