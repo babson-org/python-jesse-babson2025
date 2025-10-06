@@ -7,6 +7,16 @@ def game_over(board: list[int]):
         or if ther are no open moves left on the board
         Returns True if the game has a winner or no remaining moves, False otherwise.
     """
+    #### 
+    #"I Switched order  becuase my board kept displaying it is 
+    # "a tie even though there was a winner, my logic was to have it run through"
+     # 'calc score before a filled cell"
+    #####
+    
+     # TODO: Use calc_score to check if someone has won
+    score = calc_score(board)
+    if score == 30 or score == -30:
+        return True
     
     # TODO: Check if all cells are filled (abs(cell) == 10)
     all_filled = all(abs(cell) == 10 for cell in board)
@@ -14,10 +24,7 @@ def game_over(board: list[int]):
         return True
         
         
-    # TODO: Use calc_score to check if someone has won
-    score = calc_score(board)
-    if score == 30 or score == -30:
-        return True
+   
     # TODO: Return True if game over, otherwise False
     return False
     

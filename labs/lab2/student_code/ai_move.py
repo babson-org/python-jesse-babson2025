@@ -10,4 +10,6 @@ def ai_move(board: list[int]):
         so in this case your function should return 2
     """
     for idx in range(9):
-        if abs(board(idx)) : return idx 
+        if abs(board(idx)) : 
+            return idx 
+#### 
