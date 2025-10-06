@@ -19,8 +19,7 @@ def game_over(board: list[int]):
         return True
     
     # TODO: Check if all cells are filled (abs(cell) == 10)
-    all_filled = all(abs(cell) == 10 for cell in board)
-    if all_filled:
+    if all(abs(cell) == 10 for cell in board):
         return True
         
         
