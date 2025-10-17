@@ -1,0 +1,3 @@
+print('teacher!')
+
+print('student')
