@@ -1,3 +1,0 @@
-print('teacher!')
-
-print('student!!')
